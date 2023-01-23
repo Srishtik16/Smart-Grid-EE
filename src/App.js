@@ -11,7 +11,11 @@ import { DarkModeContext } from "./context/darkModeContext";
 import { cData, currentColumns, currentRows } from "./currentdata";
 import { vData, voltageColumns, voltageRows } from "./voltagedata";
 import { pData, powerColumns, powerRows } from "./powerdata";
-import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/landingpage/LandingPage";
+import CurrentChart from "./pages/currentcharts/CurrentChart";
+import VoltageChart from "./pages/voltagecharts/VoltageChart";
+import PowerChart from "./pages/powercharts/PowerChart";
+
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -47,6 +51,15 @@ function App() {
                 path="new"
                 element={<New inputs={userInputs} title="Add New User" />}
               />
+            </Route>
+            <Route path="currentcharts">
+              <Route index element={<CurrentChart />} component={CurrentChart}/>
+            </Route>
+            <Route path="voltagecharts">
+              <Route index element={<VoltageChart />} component={VoltageChart}/>
+            </Route>
+            <Route path="powercharts">
+              <Route index element={<PowerChart />} component={PowerChart}/>
             </Route>
             <Route path="products">
               <Route index element={<List />} />

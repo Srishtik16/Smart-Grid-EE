@@ -35,10 +35,12 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/dashboard" style={{ textDecoration: "none" }}>
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
+          </Link>
           <p className="title">CURRENT</p>
           <Link to="/currentData" style={{ textDecoration: "none" }}>
             <li>
@@ -46,7 +48,7 @@ const Sidebar = () => {
               <span>Current Data</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
+          <Link to="/currentcharts" style={{ textDecoration: "none" }}>
             <li>
               <BarChartIcon className="icon" />
               <span>Current Charts</span>
@@ -67,10 +69,12 @@ const Sidebar = () => {
               <span>Voltage Data</span>
             </li>
           </Link>
-          <li>
-            <BarChartIcon className="icon" />
-            <span>Voltage Charts</span>
-          </li>
+          <Link to="/voltagecharts" style={{ textDecoration: "none" }}>
+            <li>
+              <BarChartIcon className="icon" />
+              <span>Voltage Charts</span>
+            </li>
+          </Link>
           <p className="title">POWER</p>
           <Link to="/powerData" style={{ textDecoration: "none" }}>
           <li>
@@ -78,10 +82,12 @@ const Sidebar = () => {
             <span>Power Data</span>
           </li>
           </Link>
-          <li>
-            <BarChartIcon className="icon" />
-            <span>Power Charts</span>
-          </li>
+          <Link to="/powercharts" style={{ textDecoration: "none" }}>
+            <li>
+              <BarChartIcon className="icon" />
+              <span>Power Charts</span>
+            </li>
+          </Link>
           {/* <li>
             <SettingsApplicationsIcon className="icon" />
             <span>Settings</span>
