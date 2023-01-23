@@ -15,6 +15,7 @@ import LandingPage from "./pages/landingpage/LandingPage";
 import CurrentChart from "./pages/currentcharts/CurrentChart";
 import VoltageChart from "./pages/voltagecharts/VoltageChart";
 import PowerChart from "./pages/powercharts/PowerChart";
+import Profile from "./pages/profile/Profile";
 
 
 function App() {
@@ -60,6 +61,9 @@ function App() {
             </Route>
             <Route path="powercharts">
               <Route index element={<PowerChart />} component={PowerChart}/>
+            </Route>
+            <Route path="profile">
+              <Route index element={<Profile />} component={Profile}/>
             </Route>
             <Route path="products">
               <Route index element={<List />} />
