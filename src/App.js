@@ -16,6 +16,9 @@ import CurrentChart from "./pages/currentcharts/CurrentChart";
 import VoltageChart from "./pages/voltagecharts/VoltageChart";
 import PowerChart from "./pages/powercharts/PowerChart";
 import Profile from "./pages/profile/Profile";
+import CurrentList from "./components/historicaldata/historicalcurrent";
+import VoltageList from "./components/historicaldata/historicalvoltage";
+import PowerList from "./components/historicaldata/historicalpower";
 
 
 function App() {
@@ -30,7 +33,7 @@ function App() {
             <Route index element={<LandingPage />} />
             <Route path="login" element={<Login />} />
             <Route path="currentData">
-              <Route index element={<List data = {cData} userColumns = {currentColumns} userRows = {currentRows}/>}  component = {List}/>
+              <Route index element={<CurrentList />} component = {CurrentList}/>
               <Route path=":userId" element={<Single />} />
               <Route
                 path="new"
@@ -38,7 +41,7 @@ function App() {
               />
             </Route>
             <Route path="voltageData">
-              <Route index element={<List data = {vData} userColumns = {voltageColumns} userRows = {voltageRows}/>} component = {List}/>
+              <Route index element={<VoltageList />} component = {VoltageList}/>
               <Route path=":userId" element={<Single />} />
               <Route
                 path="new"
@@ -46,7 +49,7 @@ function App() {
               />
             </Route>
             <Route path="powerData">
-              <Route index element={<List data = {pData} userColumns = {powerColumns} userRows = {powerRows}/>} component = {List}/>
+              <Route index element={<PowerList/>} component = {PowerList}/>
               <Route path=":userId" element={<Single />} />
               <Route
                 path="new"

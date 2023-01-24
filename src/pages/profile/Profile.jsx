@@ -17,11 +17,11 @@ export default function Profile() {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img
+              {/* <img
                 className="profileCoverImg"
                 src={user.picture}
                 alt={user.name}
-              />
+              /> */}
               <img
                 className="profileUserImg"
                 src={user.picture}
