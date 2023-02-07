@@ -5,6 +5,8 @@ import Widget from "../../components/widget/Widget";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
 import Table from "../../components/table/Table";
+import Datatable from "../../components/datatable/Datatable";
+import { hData, homeColumns, homeRows } from "../../homedata";
 
 const Home = () => {
   return (
@@ -24,7 +26,8 @@ const Home = () => {
         </div> */}
         <div className="listContainer">
           <div className="listTitle">Summary</div>
-          <Table />
+          {/* <Table /> */}
+          <Datatable title = {hData} userColumns = {homeColumns} userRows = {homeRows}/>
         </div>
       </div>
     </div>

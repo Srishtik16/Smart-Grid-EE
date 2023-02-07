@@ -3,6 +3,16 @@ export const cData = "Current Data";
 export const currentColumns = [
     { field: "id", headerName: "Serial No.", width: 130 },
     {
+      field: "timestamps",
+      headerName: "Timestamp",
+      width: 290,
+    },
+    {
+      field: "dcCurrent",
+      headerName: "DC Current",
+      width: 290,
+    },
+    {
       field: "phaseCurrentR",
       headerName: "Phase Current (R)",
       width: 290,
@@ -29,6 +39,8 @@ export const currentColumns = [
 export const currentRows = [
   {
     id: 1,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -36,6 +48,8 @@ export const currentRows = [
   },
   {
     id: 2,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -43,6 +57,8 @@ export const currentRows = [
   },
   {
     id: 3,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -50,6 +66,8 @@ export const currentRows = [
   },
   {
     id: 4,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -57,6 +75,8 @@ export const currentRows = [
   },
   {
     id: 5,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -64,6 +84,8 @@ export const currentRows = [
   },
   {
     id: 6,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -71,6 +93,8 @@ export const currentRows = [
   },
   {
     id: 7,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -78,6 +102,8 @@ export const currentRows = [
   },
   {
     id: 8,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -85,6 +111,8 @@ export const currentRows = [
   },
   {
     id: 9,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
@@ -92,6 +120,8 @@ export const currentRows = [
   },
   {
     id: 10,
+    timestamps: "07-02-2023 18:12",
+    dcCurrent: 10,
     phaseCurrentR: 20,
     phaseCurrentY: 30,
     phaseCurrentB: 40,
