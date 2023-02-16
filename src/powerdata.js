@@ -1,25 +1,41 @@
 export const pData = "Power Data";
 
 export const powerColumns = [
-      { field: "id", headerName: "Serial No.", width: 150 },
+      // { field: "id", headerName: "id", width: 130 },
+      { field: "SerialNo", headerName: "Serial No.", width: 130 },
       {
-        field: "timestamps",
+        field: "Timestamp",
         headerName: "Timestamp",
         width: 290,
       },
+      // {
+      //   field: "DCCurrent",
+      //   headerName: "DC Current",
+      //   width: 290,
+      // },
+      // {
+      //   field: "ACCurrent",
+      //   headerName: "AC Current",
+      //   width: 290,
+      // },
+      // {
+      //   field: "DCVoltage",
+      //   headerName: "DC Voltage",
+      //   width: 290,
+      // },
+      // {
+      //   field: "ACVoltage",
+      //   headerName: "AC Voltage",
+      //   width: 290,
+      // },
       {
-        field: "activePower",
+        field: "ActivePower",
         headerName: "Active Power",
         width: 290,
       },
       {
-        field: "reactivePower",
+        field: "ReactivePower",
         headerName: "Reactive Power",
-        width: 290,
-      },
-      {
-        field: "cost",
-        headerName: "Cost",
         width: 290,
       },
     ];

@@ -2,10 +2,27 @@ import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
 // import { userColumns, userRows } from "../../currentdata";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Datatable = ({title, userRows, userColumns}) => {
   const [data, setData] = useState(userRows);
+  console.log("DATATABLE")
+  console.log(data)
+
+  useEffect(() => {
+    axios.get(`http://localhost:5000/api/smartgrid/`)
+    .then((response) => {
+      // console.log("Test");
+      // console.log(response.data);
+      // delete response.data['id']
+      setData(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }, []);
+
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));

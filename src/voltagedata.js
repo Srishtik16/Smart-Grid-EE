@@ -1,38 +1,43 @@
 export const vData = "Voltage Data";
 
 export const voltageColumns = [
-      { field: "id", headerName: "Serial No.", width: 130 },
+      // { field: "id", headerName: "id", width: 130 },
+      { field: "SerialNo", headerName: "Serial No.", width: 130 },
       {
-        field: "timestamps",
+        field: "Timestamp",
         headerName: "Timestamp",
         width: 290,
       },
+      // {
+      //   field: "DCCurrent",
+      //   headerName: "DC Current",
+      //   width: 290,
+      // },
+      // {
+      //   field: "ACCurrent",
+      //   headerName: "AC Current",
+      //   width: 290,
+      // },
       {
-        field: "dcVoltage",
+        field: "DCVoltage",
         headerName: "DC Voltage",
         width: 290,
       },
       {
-        field: "phaseVoltageR",
-        headerName: "Phase Voltage (R)",
+        field: "ACVoltage",
+        headerName: "AC Voltage",
         width: 290,
       },
-      {
-        field: "phaseVoltageY",
-        headerName: "Phase Voltage (Y)",
-        width: 290,
-      },
-    
-      {
-        field: "phaseVoltageB",
-        headerName: "Phase Voltage (B)",
-        width: 290,
-      },
-      {
-        field: "phaseVoltageN",
-        headerName: "Phase Voltage (Neutral)",
-        width: 290,
-      },
+      // {
+      //   field: "ActivePower",
+      //   headerName: "Active Power",
+      //   width: 290,
+      // },
+      // {
+      //   field: "ReactivePower",
+      //   headerName: "Reactive Power",
+      //   width: 290,
+      // },
     ];
   
   //temporary data

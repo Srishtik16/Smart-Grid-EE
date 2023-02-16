@@ -7,8 +7,31 @@ import Chart from "../../components/chart/Chart";
 import Table from "../../components/table/Table";
 import Datatable from "../../components/datatable/Datatable";
 import { hData, homeColumns, homeRows } from "../../homedata";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const Home = () => {
+
+  const [Data, setData] = useState([]);
+  // console.log(homeColumns);
+  // useEffect(() => {
+  //   axios.get(`http://localhost:5000/api/smartgrid/`)
+  //   .then((response) => {
+  //     // console.log("Test");
+  //     // console.log(response.data);
+  //     setData(response.data);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }, []);
+
+  var sample = new Array();
+  for(let i in Data) {
+    sample.push(Data[i]);
+    // console.log(Data[i]);
+  }
+  console.log(sample);
   return (
     <div className="home">
       <Sidebar />
@@ -27,7 +50,7 @@ const Home = () => {
         <div className="listContainer">
           <div className="listTitle">Summary</div>
           {/* <Table /> */}
-          <Datatable title = {hData} userColumns = {homeColumns} userRows = {homeRows}/>
+          <Datatable title = {hData} userColumns = {homeColumns} userRows = {sample}/>
         </div>
       </div>
     </div>

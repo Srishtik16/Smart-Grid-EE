@@ -1,38 +1,43 @@
 export const cData = "Current Data";
 
 export const currentColumns = [
-    { field: "id", headerName: "Serial No.", width: 130 },
+    // { field: "id", headerName: "id", width: 130 },
+    { field: "SerialNo", headerName: "Serial No.", width: 130 },
     {
-      field: "timestamps",
+      field: "Timestamp",
       headerName: "Timestamp",
       width: 290,
     },
     {
-      field: "dcCurrent",
+      field: "DCCurrent",
       headerName: "DC Current",
       width: 290,
     },
     {
-      field: "phaseCurrentR",
-      headerName: "Phase Current (R)",
+      field: "ACCurrent",
+      headerName: "AC Current",
       width: 290,
     },
-    {
-      field: "phaseCurrentY",
-      headerName: "Phase Current (Y)",
-      width: 290,
-    },
-  
-    {
-      field: "phaseCurrentB",
-      headerName: "Phase Current (B)",
-      width: 290,
-    },
-    {
-      field: "phaseCurrentN",
-      headerName: "Phase Current (Neutral)",
-      width: 290,
-    },
+    // {
+    //   field: "DCVoltage",
+    //   headerName: "DC Voltage",
+    //   width: 290,
+    // },
+    // {
+    //   field: "ACVoltage",
+    //   headerName: "AC Voltage",
+    //   width: 290,
+    // },
+    // {
+    //   field: "ActivePower",
+    //   headerName: "Active Power",
+    //   width: 290,
+    // },
+    // {
+    //   field: "ReactivePower",
+    //   headerName: "Reactive Power",
+    //   width: 290,
+    // },
   ];
 
 //temporary data
