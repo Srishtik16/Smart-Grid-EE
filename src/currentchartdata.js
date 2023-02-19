@@ -8,4 +8,4 @@ export const currentchartdata = [
       { name: "Saturday", Current: 68 }
     ];
 
-export const yLabel = "Current";
+export const yLabel = "ACCurrent";
