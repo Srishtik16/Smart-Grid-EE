@@ -8,4 +8,5 @@ export const powerchartdata = [
       { name: "Saturday", Power: 452 }
     ];
 
-export const yLabel = "Power";
+export const yLabel1 = "ActivePower";
+export const yLabel2 = "ReactivePower";

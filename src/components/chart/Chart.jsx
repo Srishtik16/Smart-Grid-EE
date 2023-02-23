@@ -21,30 +21,19 @@ const Chart = ({ data, aspect, title, yLabel}) => {
     axios.get(`http://localhost:5000/api/smartgrid/`)
     .then((response) => {
       console.log(response);
-      // let arr = JSON.parse(response);
+      let arr = []
       console.log(typeof(response));
       response.data.forEach( (obj) => {
-        console.log(typeof(obj['Timestamp']));
-        obj['Timestamp'] = obj['Timestamp'].substring(0, 10);
-        obj['name'] = obj['Timestamp'];
-        delete obj['Timestamp'];
-        delete obj['SerialNo'];
-        delete obj['DCVoltage'];
-        delete obj['ACVoltage'];
-        delete obj['ReactivePower'];
-        delete obj['__v'];
-        delete obj['id'];
-        delete obj['DCCurrent'];
-        delete obj['ActivePower'];
+        arr.push({'name': obj['Timestamp'].substring(0, 10), [`${yLabel}`]: obj[[`${yLabel}`]]});
       } );
-      // response = JSON.stringify( arr );
-      console.log(response.data);
-      setData(response.data);
+      // console.log(response.data);
+      console.log(arr);
+      setData(arr);
     })
     .catch((error) => {
       console.log(error);
     })
-  }, []);
+  }, [yLabel]);
 
   // Ends here
 

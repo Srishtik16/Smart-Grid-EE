@@ -8,4 +8,5 @@ export const voltagechartdata = [
       { name: "Saturday", Voltage: 218 }
     ];
 
-export const yLabel = "Voltage";
+export const yLabel1 = "ACVoltage";
+export const yLabel2 = "DCVoltage";
