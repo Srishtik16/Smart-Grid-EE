@@ -16,6 +16,12 @@ const Datatable = ({title, userRows, userColumns}) => {
       // console.log("Test");
       // console.log(response.data);
       // delete response.data['id']
+      response.data.sort(function(a, b) {
+        return a.SerialNo - b.SerialNo
+      })
+      for(let i in response.data) {
+        response.data[i]['Timestamp'] = response.data[i]['Timestamp'].substring(0, 10)
+      }
       setData(response.data);
     })
     .catch((error) => {

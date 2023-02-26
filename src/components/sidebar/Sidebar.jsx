@@ -101,11 +101,11 @@ const Sidebar = () => {
           </Link>
           <li>
             <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-            {isUser ?
-              <button onClick={() => {logout({returnTo: window.location.origin})}} style={{backgroundColor: "black"}}></button> :
-              <Link to="/login"></Link>
-            }
+            <>
+              {isUser ?
+              <span onClick={() => {logout({returnTo: window.location.origin})}}>Logout</span> :
+              <Link to="/login"></Link> }
+            </>
           </li>
         </ul>
       </div>
