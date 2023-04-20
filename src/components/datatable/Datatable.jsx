@@ -1,14 +1,40 @@
 import "./datatable.scss";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 // import { userColumns, userRows } from "../../currentdata";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Datatable = ({title, userRows, userColumns}) => {
+const Datatable = ({title, userRows, userColumns, Pdata = 0, Idata = 5, Ddata = 0, Ndata = 0}) => {
   const [data, setData] = useState(userRows);
   console.log("DATATABLE")
   console.log(data)
+  const [P, setP] = useState(0);
+  const [I, setI] = useState(5);
+  const [D, setD] = useState(0);
+  const [N, setN] = useState(0);
+  async function handlePIDN() {
+    const Pawait = await(Pdata)
+    const Iawait = await(Idata)
+    const Dawait = await(Ddata)
+    const Nawait = await(Ndata)
+    if(Pawait) {
+      setP(Pawait);
+    }
+    if(Iawait) {
+      setI(Iawait);
+    }
+    if(Dawait) {
+      setD(Dawait);
+    }
+    if(Nawait) {
+      setN(Nawait);
+    }
+    else {
+      console.log("ERROR");
+    }
+  }
+
 
   useEffect(() => {
     axios.get(`http://localhost:5000/api/smartgrid/`)
@@ -21,13 +47,18 @@ const Datatable = ({title, userRows, userColumns}) => {
       })
       for(let i in response.data) {
         response.data[i]['Timestamp'] = response.data[i]['Timestamp'].substring(0, 10)
+        response.data[i]['P'] = Pdata
+        response.data[i]['D'] = Ddata
+        response.data[i]['Idatas'] = Idata
+        response.data[i]['N'] = Ndata
+        console.log(response.data)
       }
       setData(response.data);
     })
     .catch((error) => {
       console.log(error);
     })
-  }, []);
+  }, [Pdata, Idata, Ddata, Ndata]);
 
 
   const handleDelete = (id) => {
@@ -71,6 +102,7 @@ const Datatable = ({title, userRows, userColumns}) => {
         columns = {userColumns}
         pageSize={9}
         rowsPerPageOptions={[9]}
+        components={{Toolbar: GridToolbar, }}
         // checkboxSelection
       />
     </div>

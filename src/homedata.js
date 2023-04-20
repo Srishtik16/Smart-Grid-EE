@@ -38,6 +38,31 @@ export const homeColumns = [
         headerName: "Reactive Power",
         width: 290,
       },
+      {
+        field: "P",
+        headerName: "P",
+        width: 290,
+      },
+      {
+        field: "Idatas",
+        headerName: "I",
+        width: 290,
+      },
+      {
+        field: "D",
+        headerName: "D",
+        width: 290,
+      },
+      // {
+      //   field: "Q",
+      //   headerName: "Q",
+      //   width: 290,
+      // },
+      {
+        field: "N",
+        headerName: "N",
+        width: 290,
+      },
     ];
   
   //temporary data
